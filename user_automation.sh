@@ -4,7 +4,7 @@ then
     USERS=$@
     for USER in ${USERS[@]}
     do
-        echo $USERS
+        echo $USER
     done
 else
     echo "Please enter valid input"
