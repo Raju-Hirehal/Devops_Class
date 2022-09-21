@@ -12,7 +12,7 @@ if [ $# -gt 0 ]; then
             SPEC='!@#$%^&*()_'
             SPEC_CHAR=$(echo $SPEC | fold -w1 | shuf)
             PASSWORD=India@${RANDOM}${SPEC_CHAR}
-            echo "$USER:$PASSWORD" | sudo chpasswd
+            echo ""$USER:$PASSWORD" | sudo chpasswd"
             passwd -e $USER
             echo $PASSWORD
         fi
