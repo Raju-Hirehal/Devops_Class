@@ -10,6 +10,10 @@ if [ $# -gt 0 ]; then
             sudo useradd -m $USER --shell /bin/bash
             SPEC='!@#$%^&*()_'
             SPEC_CHAR=$(echo $SPEC | fold -w1 | shuf)
+            PASSWORD=India@${RANDOM}${SPEC_CHAR}
+            echo "$USER:$PASSWORD" | sudo chpasswd
+            passwd -e $USER
+            echo $PASSWORD
         fi
     done
 else
