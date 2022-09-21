@@ -7,6 +7,7 @@ if [ $# -gt 0 ]; then
             echo "USERNAME $USER ALREADY EXISTS TRY A DIFFERENT NAME"
         else
             echo "Lets crate user $USER"
+            sudo useradd -m $USER --shell /bin/bash
         fi
     done
 else
