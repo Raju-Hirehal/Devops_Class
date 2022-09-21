@@ -1,5 +1,4 @@
 #!/bin/bash
-set -x -e
 if [ $# -gt 0 ]; then
     USERS=$@
     for USER in ${USERS[@]}; do
