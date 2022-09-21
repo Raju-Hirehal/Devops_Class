@@ -8,6 +8,8 @@ if [ $# -gt 0 ]; then
         else
             echo "Lets crate user $USER"
             sudo useradd -m $USER --shell /bin/bash
+            SPEC='!@#$%^&*()_'
+            SPEC_CHAR=$(echo $SPEC | fold -w1 | shuf)
         fi
     done
 else
